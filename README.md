@@ -1,0 +1,2 @@
+# SummerVacationCounter
+一関高専の2016年度夏季休業の残日数を表示するプログラムです
