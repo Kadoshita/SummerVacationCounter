@@ -1,0 +1,35 @@
+@media screen and (min-width: 641px){
+	body{
+		background-color: black;
+		font-family: 'Amethysta', serif;
+		font-weight: 900;
+	}
+	img{
+		width: 120px;
+		height: 120px;
+	}
+	#content{
+		position: absolute;
+		margin-top: 10%;
+		margin-bottom: 10%;
+		margin-right: 0px;
+		margin-left: 0px;
+		width: 98%;
+	}
+	#count1{
+		padding: 10px;
+		background-color: #310D01;
+		border-style: solid;
+		border-color: #521F00;
+		border-width: 2px;
+		height: auto;
+		width: 99%;
+		text-align: center;
+		font-size: 64px;
+		color: #FF7900;
+	}
+	#sinchoku{
+		font-size: 48px;
+		text-align: center;
+	}
+}

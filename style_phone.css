@@ -1,0 +1,38 @@
+@media screen and (max-width:640px){
+	body{
+		background-color: black;
+		font-family: 'Amethysta', serif;
+		font-weight: 900;
+	}
+	img{
+		width: 64px;
+		height: 64px;
+	}
+	#content{
+		position: absolute;
+		margin-top: 10%;
+		margin-bottom: 10%;
+		margin-right: 0px;
+		margin-left: 0px;
+		width: 95%;
+	}
+
+	#count1{
+		padding: 10px;
+		background-color: #310D01;
+		border-style: solid;
+		border-color: #521F00;
+		border-width: 2px;
+		text-align: center;
+		font-size: 24px;
+		color: #FF7900;
+	}
+	#sinchoku{
+		font-size: 28px;
+		text-align: center;
+	}
+	.br:before {
+		content: "\A" ;
+		white-space: pre ;
+	}
+}
