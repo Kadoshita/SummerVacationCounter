@@ -1,15 +1,16 @@
-var isClick=false;
+var counter;
 
-setInterval("count1()", 1000 );
-
-function count1(){
-	var date, Year, countYear, tmp, Msec, countDay, countHour, countMin, countSec,
+counter=setInterval(function(){
+	var date, Year, countYear, tmp, Msec, countDay, countHour, countMin, countSec;
 	date = new Date();
 	Year = date.getFullYear();
 	countYear = new Date( 2016 , 8 , 19 ,00,00,00);
 	tmp=countYear;
 	Msec = countYear.getTime() - date.getTime();
-	
+
+	if(Msec<=1000){
+		clearInterval(counter);
+	}
 	countDay = Math.floor ( Msec / (1000*60*60*24) );
 	Msec -= ( countDay * (1000*60*60*24) );
 	
@@ -20,15 +21,16 @@ function count1(){
 	Msec -= ( countMin * (1000*60) );
 	
 	countSec = Math.floor ( Msec / 1000);
-	changeColor1(countDay);
+	changeColor(countDay);
 	myDisp = "";
 	if ( countDay != 0 ) myDisp += '<span class=\"dseg\">'+countDay + "</span>日<span class=\"br\">";
 	if ( countHour != 0 ) myDisp += '<span class=\"dseg\">'+countHour + "</span>時間 ";
 	if ( countMin != 0 ) myDisp += '<span class=\"dseg\">'+countMin + "</span>分 ";
 	myDisp += '<span class=\"dseg\">'+countSec + "</span>秒";
 	document.getElementById("countdown1").innerHTML = myDisp;
-}
-function changeColor1(count){
+}, 1000 );
+
+function changeColor(count){
 	var count1=document.getElementById("count1");
 	var dialog1=document.getElementById("dialog1");
 	if(count>=20){
